@@ -45,6 +45,10 @@ function bumpVersion(currentVersion, type) {
 
     versionArray[acceptedVersionBump.indexOf(type)]++;
 
+    for( var i = acceptedVersionBump.indexOf(type)+1; i < acceptedVersionBump.length; i++ ) {
+        versionArray[i] = 0;
+    }
+
     return versionArray.join('.');
 }
 
