@@ -1,23 +1,21 @@
+#! /usr/bin/env node
+
 var argv = require('minimist')(process.argv.slice(2));
 var fs = require('fs');
 var exec = require('child_process').exec;
 
 var version;
-var bump;
+var bump = 'patch';
 var newVersion;
 
 var acceptedVersionBump = [ 'major', 'minor', 'patch' ];
 
-if ( argv.version ) {
-    if ( acceptedVersionBump.indexOf(argv.version) !== -1 ) {
-        bump = argv.version;
-    } else {
-        console.log(argv.version + ' is no a valid bump type. Accepted types are major, minor, patch');
-        throw 'Invalid bump type';
+acceptedVersionBump.forEach(function(version) {
+    if ( argv._.indexOf(version) !== -1 ) {
+        bump = version;
     }
-} else {
-    bump = 'patch';
-}
+});
+
 
 fs.readFile('./package.json', 'utf8', parseVersion);
 
