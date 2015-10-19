@@ -13,7 +13,7 @@ Clone this repo and run `npm link` in the root folder.
 
 If no release type is specified, a patch bump is performed.
 
-The command assumes that you can run `git-flow` commands from your CLI.
+Git flow release creator assumes that you can run `git-flow` commands from your CLI.
 
 ## License
 MIT
