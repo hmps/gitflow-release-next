@@ -7,6 +7,13 @@ A small and simple Node CLI tool to create a new release branch, following the [
 
 Clone this repo and run `npm link` in the root folder.
 
+This will create two CLI commands:
+
+- `create-release`
+- `cr`
+
+They both do the same thing, `cr` is just a shorter version.
+
 ## Usage
 
 `$ create-release [major|minor|patch]`

@@ -7,7 +7,8 @@
     "minimist": "^1.2.0"
   },
   "bin": {
-    "create-release" : "index.js"
+    "create-release" : "index.js",
+    "cr" : "index.js"
   },
   "devDependencies": {},
   "scripts": {
